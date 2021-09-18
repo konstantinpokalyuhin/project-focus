@@ -1,3 +1,13 @@
 Django==2.2.19
+flake8==3.9.2
+importlib-metadata==4.8.1
+mccabe==0.6.1
+numpy==1.21.2
+opencv-python==4.5.3.56
+Pillow==8.3.2
+pycodestyle==2.7.0
+pyflakes==2.3.1
 pytz==2021.1
 sqlparse==0.4.2
+typing-extensions==3.10.0.2
+zipp==3.5.0

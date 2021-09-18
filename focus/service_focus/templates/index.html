@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+         {{ form.as_p }}
+        <button type="submit">Upload</button>
+      </form>
+      
+      
+      {% if img_obj %}
+        <h3>Succesfully uploaded : {{img_obj.filename}}</h3>
+        <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:400px">
+        <ul>
+          <li>{{img_obj.image.path|linebreaksbr}}</li>
+          <li>{{ img_obj.image.url|linebreaksbr}}</li>
+        </ul>
+      {% endif %}
+      
+      <a class="btn btn-sm btn-outline-info" href="{% url 'service_focus:pixels' %}" role="button">
+        Результаты
+      </a>
+</html>
